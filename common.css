@@ -1,0 +1,141 @@
+/* палитра */
+/* цвет основного текста: #212121 */
+/* побочный цвет текста(чёрный): #757575 */
+/* побочный цвет текста(белый): #fff */
+/* акцентный цвет: #2196f3 */
+
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color-black: #757575;
+  --secondary-text-color-white: #fff;
+  --accent-color: #2196f3;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  box-sizing: content-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* index.html */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  background-color: silver;
+  margin-top: 94px;
+}
+
+.head > .container {
+  margin-top: 0px;
+}
+
+.index-h1 {
+  color: var(--secondary-text-color-white);
+
+  font-weight: 900;
+  font-size: 44px;
+  letter-spacing: 0.06em;
+  line-height: 1.36;
+  text-align: center;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.index-h2 {
+  color: var(--primary-text-color);
+  font-size: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+/* header */
+
+.logo {
+  color: var(--primary-text-color);
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.logo-blue {
+  color: var(--accent-color);
+}
+
+.site-nav {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link {
+  color: var(--primary-text-color);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-nav .current {
+  color: var(--accent-color);
+}
+
+/* Button */
+
+.btn {
+  color: var(--secondary-text-color-white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.44;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  color: var(--secondary-text-color-white);
+  background-color: var(--accent-color);
+
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+.btn:active {
+  background: #188ce8;
+}
+
+/* footer */
+
+.info {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.adress {
+  color: var(--secondary-text-color-white);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.join {
+  color: var(--secondary-text-color-white);
+  font-weight: 700;
+  font-size: 14px;
+}

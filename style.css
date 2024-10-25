@@ -1,0 +1,67 @@
+/* герой */
+
+.button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+}
+
+/* преимущества */
+
+.advantages .title {
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+.advantages .text {
+    color: var(--secondary-text-color-black);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+
+/* специальзация */
+
+
+
+/* команда */
+
+.comand .title {
+    color: var(--primary-text-color);
+    font-weight: 500;
+        font-size: 16px;
+}
+
+.comand .text {
+    color: var(--secondary-text-color-black);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* постоянные клиенты */
+
+
+/* portfolio.html */
+
+/* filter */
+
+/* cart */
+
+.port .title {
+    columns:  var(--primary-text-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.port .text {
+    color: var(--secondary-text-color-black);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+}
