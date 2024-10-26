@@ -1,67 +1,101 @@
-/* герой */
+/* ГЕРОЙ */
 
-.button {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
+.index-h1 {
+  color: var(--secondary-text-color-white);
+
+  font-weight: 900;
+  font-size: 44px;
+  letter-spacing: 0.06em;
+  line-height: 1.36;
+  text-align: center;
+
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
 
-/* преимущества */
+.hero .container {
+  text-align: center;
+}
+
+/* ПРЕИМУЩЕСТВА */
+
+.advantages {
+  display: flex;
+  margin: -15px;
+}
+
+.advantages .link {
+  margin: 15px;
+}
 
 .advantages .title {
-    color: var(--primary-text-color);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 
 .advantages .text {
-    color: var(--secondary-text-color-black);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+  color: var(--secondary-text-color-black);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
 }
 
+/* СПЕЦИАЛИЗАЦИЯ */
 
-/* специальзация */
+.work {
+  display: flex;
+  margin: -15px;
+}
 
+.work .item {
+  margin: 15px;
+}
 
-
-/* команда */
+/* КОМАНДА */
 
 .comand .title {
-    color: var(--primary-text-color);
-    font-weight: 500;
-        font-size: 16px;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .comand .text {
-    color: var(--secondary-text-color-black);
-    font-weight: 400;
-    font-size: 16px;
+  color: var(--secondary-text-color-black);
+  font-weight: 400;
+  font-size: 16px;
 }
 
-/* постоянные клиенты */
+/* ПОСТОЯННЫЕ КЛИЕНТЫ */
 
+.clients {
+  display: flex;
+  margin: -15px;
+  justify-content: space-between;
+}
 
-/* portfolio.html */
+.clients .item {
+  margin: 15px;
+}
+
+/* PORTFOLIO */
 
 /* filter */
 
 /* cart */
 
 .port .title {
-    columns:  var(--primary-text-color);
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+  columns: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
 }
 
 .port .text {
-    color: var(--secondary-text-color-black);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.87;
+  color: var(--secondary-text-color-black);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
 }
