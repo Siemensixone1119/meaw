@@ -4,6 +4,8 @@
 /* побочный цвет текста(белый): #fff */
 /* акцентный цвет: #2196f3 */
 
+/* УТИЛИТЫ */
+
 :root {
   --primary-text-color: #212121;
   --secondary-text-color-black: #757575;
@@ -19,15 +21,16 @@ body {
 
 a {
   text-decoration: none;
+  margin: 0px;
 }
 
 ul {
   list-style: none;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-/* index.html */
+/* INDEX */
 
 .container {
   padding-left: 15px;
@@ -39,21 +42,8 @@ ul {
   margin-top: 94px;
 }
 
-.head > .container {
+header > .container {
   margin-top: 0px;
-}
-
-.index-h1 {
-  color: var(--secondary-text-color-white);
-
-  font-weight: 900;
-  font-size: 44px;
-  letter-spacing: 0.06em;
-  line-height: 1.36;
-  text-align: center;
-
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 .index-h2 {
@@ -63,11 +53,18 @@ ul {
   text-align: center;
 }
 
-/* header */
+/* HEADER */
+
+/* navigation */
+
+/* logo */
 
 .logo {
-  color: var(--primary-text-color);
+  display: inline-block;
+  align-items: start;
+  margin-right: 93px;
 
+  color: var(--primary-text-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -77,31 +74,55 @@ ul {
   color: var(--accent-color);
 }
 
+/* navig */
+
+.navig {
+  display: flex;
+  align-items: center;
+}
+
+.navig .item {
+  display: inline-block;
+  color: var(--primary-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.navig .link:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navig .item:hover,
+.navig .item:focus,
+.site-nav .current {
+  color: var(--accent-color);
+}
+
+/* site-nav */
+
 .site-nav {
+  display: flex;
+
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
 }
 
-.site-nav .link {
-  color: var(--primary-text-color);
-  margin-top: 0px;
-  margin-bottom: 0px;
+/* adres-nav */
+
+.adres-nav {
+  display: flex;
+  margin-left: auto;
+  /* margin-right: 215px; */
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .current {
-  color: var(--accent-color);
-}
-
-/* Button */
+/* BUTTON */
 
 .btn {
   color: var(--secondary-text-color-white);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.44;
+  line-height: 1.87;
   letter-spacing: 0.06em;
   text-align: center;
 
@@ -118,9 +139,27 @@ ul {
   background: #188ce8;
 }
 
-/* footer */
+/* FOOTER */
+
+.foot {
+  display: flex;
+}
 
 .info {
+  margin-right: 70px;
+}
+
+.social-link {
+  display: flex;
+  margin: -10px;
+  justify-content: space-between;
+}
+
+.social .item {
+  margin: 10px;
+}
+
+.info-text {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
   font-size: 14px;
