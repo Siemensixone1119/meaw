@@ -1,5 +1,16 @@
 /* ГЕРОЙ */
 
+.hero {
+  max-width: 1600px;
+  height: 600px;
+
+  background-color: darkgray;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)) ,url(image/format/jpg/hero/Img.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .index-h1 {
   color: var(--secondary-text-color-white);
 
@@ -8,16 +19,26 @@
   letter-spacing: 0.06em;
   line-height: 1.36;
   text-align: center;
-
   margin-top: 0px;
   margin-bottom: 30px;
 }
 
-.hero .container {
+.hero .container{
   text-align: center;
+  padding-top: 200px;
+}
+/* ПРЕИМУЩЕСТВА */
+
+.picture {
+  padding: 25px 100px;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 
-/* ПРЕИМУЩЕСТВА */
+.picture .icon {
+  width: 70px;
+  height: 70px;
+}
 
 .advantages {
   display: flex;
@@ -47,6 +68,7 @@
 .work {
   display: flex;
   margin: -15px;
+  margin-bottom: 46px;
 }
 
 .work .item {
@@ -55,30 +77,122 @@
 
 /* КОМАНДА */
 
-.comand .title {
+.comand {
+  background: #f5f4fa;
+}
+
+.comand-list {
+  display: flex;
+  margin: -15px;
+  justify-content: space-between;
+}
+
+.comand-list .title {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
+  margin: 0px;
 }
 
-.comand .text {
+.worker {
+  width: 270px;
+  background-color: var(--secondary-text-color-white);
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 94px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+.worker:nth-child(1){
+  margin-left: 0px;
+}
+
+.worker:last-child {
+  margin-right: 0px;
+}
+
+.worker > * {
+  width: 100%;
+  height: auto;
+}
+
+.comand-list .text {
   color: var(--secondary-text-color-black);
   font-weight: 400;
   font-size: 16px;
+}
+
+.comand .link-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.worker-content {
+  padding: 32px 30px;
+}
+
+.worker .text {
+  text-align: center;
+}
+
+.comand .link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #AFB1B8;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.comand .link:hover,
+.comand .link:focus {
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color-white);
+}
+
+.comand .icon{
+  width: 20px;
+  height: 20px;
+  fill: currentColor
+}
+
+.comand .icon:hover,
+.comand .icon:focus{
+  fill: var(--secondary-text-color-white);
 }
 
 /* ПОСТОЯННЫЕ КЛИЕНТЫ */
 
 .clients {
   display: flex;
-  margin: -15px;
   justify-content: space-between;
+  margin-bottom: 94px;
 }
 
-.clients .item {
-  margin: 15px;
+.clients .link {
+  display: inline-block;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 
+.clients .link:hover .icon{
+  fill: var(--accent-color);
+}
+
+.clients .link:hover {
+  border-color: var(--accent-color);
+}
+
+.clients .icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
 /* PORTFOLIO */
 
 /* filter */
