@@ -29,6 +29,10 @@
 }
 /* ПРЕИМУЩЕСТВА */
 
+.hide {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
 .picture {
   padding: 25px 100px;
   background: #f5f4fa;
@@ -43,6 +47,7 @@
 .advantages {
   display: flex;
   margin: -15px;
+  margin-top: 94px;
 }
 
 .advantages .link {
