@@ -22,6 +22,7 @@ body {
 a {
   text-decoration: none;
   margin: 0px;
+  cursor: pointer;
 }
 
 ul {
@@ -38,8 +39,12 @@ ul {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
-  background-color: silver;
+  /* background-color: silver; */
   margin-top: 94px;
+}
+
+.container:nth-child(1){
+  margin-top: 0;
 }
 
 header > .container {
@@ -51,6 +56,8 @@ header > .container {
   font-size: 700;
   font-size: 36px;
   text-align: center;
+  padding-bottom: 50px;
+  padding-top: 94px;
 }
 
 /* HEADER */
@@ -74,6 +81,38 @@ header > .container {
   color: var(--accent-color);
 }
 
+.email,
+.phone {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-text-color-black);
+}
+
+.email:hover .head-info,
+.phone:hover .head-info {
+  fill: var(--accent-color);
+}
+
+
+.email:hover,
+.phone:hover{
+  color: var(--accent-color);
+}
+.head-info {
+  margin-right: 10px;
+  fill: var(--secondary-text-color-black);
+}
+
+.email .head-info {
+  width: 16px;
+  height: 12px;
+}
+
+.phone .head-info {
+  width: 10px;
+  height: 16px;
+}
+
 /* navig */
 
 .navig {
@@ -86,6 +125,11 @@ header > .container {
   color: var(--primary-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  margin: 0px;
+}
+
+.adres-nav .item {
+  color: var(--secondary-text-color-black);
 }
 
 .navig .link:not(:last-child) {
@@ -141,22 +185,57 @@ header > .container {
 
 /* FOOTER */
 
+.footer {
+  background-color: #2f303a;
+}
+
 .foot {
   display: flex;
+  align-items: baseline;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.foot .logo {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.foot .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color:rgba(255, 255, 255, 0.1);
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.foot > .link:last-child {
+  margin-right: 0px;
+}
+
+.foot .link:hover,
+.foot .link:focus {
+  background-color: var(--accent-color);
+}
+
+.foot .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--secondary-text-color-white)
 }
 
 .info {
   margin-right: 70px;
 }
 
-.social-link {
+.foot .link-list {
   display: flex;
-  margin: -10px;
+  padding-top: 20px;
   justify-content: space-between;
-}
-
-.social .item {
-  margin: 10px;
 }
 
 .info-text {
@@ -164,17 +243,20 @@ header > .container {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+  margin: 0px;
 }
 
 .adress {
   color: var(--secondary-text-color-white);
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
 }
 
 .join {
   color: var(--secondary-text-color-white);
   font-weight: 700;
   font-size: 14px;
+  margin: 0px;
 }
