@@ -7,8 +7,26 @@ a {
   color: var(--primary-text-color);
 }
 
+.portfolio-head {
+  border-bottom: 1px solid #ececec;
+}
+
 .container .port {
   margin-top: 34px;
+}
+
+.portfolio-head .line {
+  position: absolute;
+  top: 9.8%;
+  left: 33.5%;
+  border-radius: 2px;
+  width: 78px;
+  height: 4px;
+  background-color: var(--accent-color);
+}
+
+.cur {
+  position: relative;
 }
 
 /* ГЕРОЙ */
@@ -18,8 +36,10 @@ a {
   height: 600px;
 
   background-color: darkgray;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url(image/format/jpg/hero/Img.jpg);
   background-position: center;
   background-size: cover;
@@ -167,7 +187,7 @@ a {
   margin-right: 0px;
 }
 
-.worker>* {
+.worker > * {
   width: 100%;
   height: auto;
 }
@@ -254,19 +274,49 @@ a {
 /* filter */
 
 .filter {
+  position: relative;
   display: flex;
   margin-top: 94px;
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
+  width: 611px;
   align-items: center;
   justify-content: space-between;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.filter label {
+  display: inline-block;
+  padding: 6px 22px;
+  margin-right: 8px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 162%;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+.filter label:last-child {
+  margin: 0px;
+}
+
+input[type="radio"]:checked + label {
+  color: var(--secondary-text-color-white);
+  background-color: var(--accent-color);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* cart */
 
 main .port {
-  margin-top: 50px;
+  margin-top: 56px;
   margin-bottom: 79px;
 }
 
@@ -332,14 +382,219 @@ main .port {
   line-height: 1.56;
   transform: translateY(100%);
   opacity: 0;
-  transition: transform 250ms cubic-bezier(.17, .67, .83, .67);
+  transition: transform 400ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 .card:hover .services-overlay {
-  transform: translateY(0); 
+  transform: translateY(0);
   opacity: 1;
 }
 
 .text-content {
   margin: 20px 24px;
+}
+
+/* MODAL WINDOW */
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--secondary-text-color-white);
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+  border-radius: 4px;
+}
+
+.exit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--secondary-text-color-white);
+}
+
+.exit-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.exit:hover .exit-icon {
+  fill: var(--accent-color);
+}
+
+.modal .title {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  text-align: center;
+  margin: 0px;
+}
+
+.label {
+  display: block;
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  transform: translate(5%, -40%);
+  transition: transform 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color-black);
+}
+
+.form-div {
+  position: relative;
+}
+
+.input {
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  transform: translate(-40px, -37px);
+  transition: transform 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.input:focus,
+.comment:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.input:focus + .label + .icon {
+  fill: var(--accent-color);
+}
+
+.form-div .icon {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.comment {
+  position: relative;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 12px 16px;
+  resize: none;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.comment::placeholder {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.label-comm {
+  display: block;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color-black);
+}
+
+.checkbox-div {
+  margin-top: 20px;
+  margin-left: 52px;
+  margin-right: 51px;
+}
+
+.checkbox {
+  appearance: none;
+}
+
+.checkbox-div .icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 8.38px;
+  outline: none;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 10%;
+}
+
+.checkbox:checked + .icon {
+  background-image: url("image/format/svg/icon_check.svg");
+  background-origin: border-box;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.checkbox-div .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color-black);
+}
+
+.checkbox-div .link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--accent-color);
+}
+
+.submit {
+  display: inline-block;
+  width: 200px;
+  padding: 10px 55px;
+  background-color: #188ce8;
+  margin-top: 30px;
+  margin-right: 165px;
+  margin-left: 165px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 187%;
+  letter-spacing: 0.06em;
+  color: var(--secondary-text-color-white);
 }
