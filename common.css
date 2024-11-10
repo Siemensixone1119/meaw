@@ -25,6 +25,10 @@ a {
   cursor: pointer;
 }
 
+button {
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
   margin: 0px;
@@ -81,6 +85,16 @@ header > .container {
   color: var(--accent-color);
 }
 
+.line {
+  position: absolute;
+  top: 9.8%;
+  left: 27%;
+  border-radius: 2px;
+  width: 48px;
+  height: 4px;
+  background-color: var(--accent-color);
+}
+
 .email,
 .phone {
   display: flex;
@@ -97,6 +111,7 @@ header > .container {
 .phone:hover {
   color: var(--accent-color);
 }
+
 .head-info {
   margin-right: 10px;
   fill: var(--secondary-text-color-black);
@@ -112,6 +127,9 @@ header > .container {
   height: 16px;
 }
 
+.cur {
+  position: relative;
+}
 /* navig */
 
 .navig {
@@ -168,6 +186,8 @@ header > .container {
   line-height: 1.87;
   letter-spacing: 0.06em;
   text-align: center;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 
   color: var(--secondary-text-color-white);
   background-color: var(--accent-color);
@@ -212,10 +232,6 @@ header > .container {
   transition: color 0.3s, background-color 0.3s;
 }
 
-.foot > .link:last-child {
-  margin-right: 0px;
-}
-
 .foot .link:hover,
 .foot .link:focus {
   background-color: var(--accent-color);
@@ -234,6 +250,7 @@ header > .container {
 .foot .link-list {
   display: flex;
   padding-top: 20px;
+  width: 206px;
   justify-content: space-between;
 }
 
@@ -258,4 +275,56 @@ header > .container {
   font-weight: 700;
   font-size: 14px;
   margin: 0px;
+}
+
+.join-mail {
+  margin-left: 83px;
+  margin-bottom: 20px;
+}
+
+.join-form {
+  display: flex;
+}
+
+.mailing {
+  align-items: center;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  width: 358px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  margin-left: 83px;
+}
+
+.mail-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  background-color: var(--accent-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 12px;
+  border: none;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 187%;
+  letter-spacing: 0.06em;
+  color: var(--secondary-text-color-white);
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.icon-mail {
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  margin-left: 10px;
 }
