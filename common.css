@@ -17,6 +17,7 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   box-sizing: content-box;
+  max-width: 100%;
 }
 
 a {
@@ -43,8 +44,8 @@ ul {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
-  /* background-color: silver; */
   margin-top: 94px;
+
 }
 
 .container:nth-child(1) {
@@ -87,8 +88,8 @@ header > .container {
 
 .line {
   position: absolute;
-  top: 9.8%;
-  left: 27%;
+
+  top: 78px;
   border-radius: 2px;
   width: 48px;
   height: 4px;
