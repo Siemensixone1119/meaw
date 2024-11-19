@@ -15,12 +15,10 @@ a {
   margin-top: 34px;
 }
 
-.portfolio-head .line {
+ .portfolio-head .line {
   position: absolute;
-  top: 9.8%;
-  left: 33.5%;
   border-radius: 2px;
-  width: 78px;
+  width: 75px;
   height: 4px;
   background-color: var(--accent-color);
 }
@@ -32,7 +30,7 @@ a {
 /* ГЕРОЙ */
 
 .hero {
-  max-width: 1600px;
+  max-width: 2000px;
   height: 600px;
 
   background-color: darkgray;
@@ -321,7 +319,7 @@ main .port {
 }
 
 .port .title {
-  columns: var(--primary-text-color);
+  color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
